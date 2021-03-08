@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat guess Anime Opening</title>
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <div class="container">
+
+        <div class="login-form hidden" id="ui-login">
+            <h1 class="title">Chat guess Anime Opening!</h1>
+
+            <div class="form-control">
+                <input id="tw-username-input" class="input" type="text" placeholder="Twitch username" />
+            </div>
+
+            <div class="form-control">
+                <button id="login-btn" class="btn">Login</button>
+                <p><b id="login-status"></b></p>
+            </div>
+
+            <div class="form-control">
+                <p>This game has been created by <a href="https://twitter.com/sammwy">@Sammwy</a>, please consider making a donation at <a href="https://patreon.com/sammwy">patreon.com/sammwy</a></a></p>
+            </div>
+
+        </div>
+
+        <div class="join-form hidden" id="ui-join">
+            <h1 class="title">Chat guess Anime Opening!</h1>
+
+            <div class="form-control">
+                <p>Logged as <a href="https://twitch.tv/" id="tw-username">...</a></p>
+            </div>
+
+            <div class="form-control">
+                <p>Type "!join" in the chat to join the game.</p>
+                <button onclick="app.start()" class="btn" id="btn-start">Start the game with 0 players</button>
+            </div>
+
+            <div class="form-control">
+                <p id="last-action-join"></p>
+            </div>
+        </div>
+
+        <div class="timer hidden" id="ui-timer">
+            <svg class="progress-ring" width="120" height="120">
+                <circle
+                    id="timer-circle"
+                    class="progress-ring__circle"
+                    stroke="rgb(113, 103, 255)"
+                    stroke-width="6"
+                    fill="transparent"
+                    r="52"
+                    cx="60"
+                    cy="60">
+                </circle>
+                <text x="50%" id="timer-text" y="50%" text-anchor="middle" stroke="rgb(113, 103, 255)" stroke-width="3px" font-size="30px" dy=".3em">20</text>
+            </svg>
+        </div>
+
+        <div class="video hidden" id="ui-video"></div>
+        <div class="leaderboard hidden" id="leaderboard">
+        </div>
+    </div>
+
+    <script src="data/ops.js"></script>
+
+    <script src="js/tmi.js"></script>
+
+    <script src="js/chat.js"></script>
+    <script src="js/gamemanager.js"></script>
+    <script src="js/playerhandler.js"></script>
+    <script src="js/timer.js"></script>
+    <script src="js/uihandler.js"></script>
+    <script src="js/uimanager.js"></script>
+
+    <script src="js/app.js"></script>
+    <script src="js/game.js"></script>
+</body>
+</html>

@@ -1,0 +1,160 @@
+/* Web content */
+body {
+    background: url('../images/bg.jpg') no-repeat fixed;
+    background-position: center;
+    background-size: cover;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    width: 70%;
+    margin: 50px auto;
+}
+
+.hidden {
+    display: none;
+}
+
+/* Timer */
+.progress-ring__circle {
+    transition: 0.35s stroke-dashoffset;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+}
+
+/* Video */
+.video > video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: 0;
+}
+
+.leaderboard {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: 999999;
+}
+
+.correct-answer {
+    z-index: 999990;
+    font-size: 50px;
+    text-shadow: black 1px 0 10px; 
+    color: white;
+    position: absolute;
+    display: block;
+    text-align: center;
+}
+
+/* Leaderboard */
+.leaderboard {
+    text-align: center;
+    margin: auto;
+    padding-top: 50px;
+    width: 80%;
+    background-color: #0007;
+}
+
+.leader-item {
+    color: white;
+    padding: 20px;
+}
+
+.leader-position {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.leader-username {
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.leader-pts {
+    color: goldenrod;
+}
+
+.leader-wins {
+    color: green;
+}
+
+.leader-loss {
+    color: red;
+}
+
+/* Layout */
+.block {
+    display: block;
+    margin: 7px;
+}
+
+.inline {
+    display: inline-block;
+    margin: 7px;
+}
+
+/* FORMS */
+.timer,
+.join-form,
+.login-form {
+    background-color: white;
+    width: 400px;
+    margin: auto;
+    text-align: center;
+    padding: 30px;
+    border-radius: 50px;
+}
+
+.form-control {
+    margin: 30px 0;
+}
+
+.title {
+    font-size: 25px;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(113, 103, 255);
+}
+
+.input {
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    font-size: 15px;
+    border-bottom: 1px solid #777;
+    color: #333;
+}
+
+.input::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #aaa;
+    opacity: 1; /* Firefox */
+}
+  
+.input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #aaa;
+}
+  
+.input::-ms-input-placeholder { /* Microsoft Edge */
+    color: #aaa;
+}
+
+
+.btn {
+    background: rgb(113, 103, 255);
+    color: white;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 30px;
+}
