@@ -19,7 +19,7 @@ class GameManager {
         container.appendChild(nameElement);
 
         const videoElement = document.createElement("video");
-        videoElement.src = "videos/" + media;
+        videoElement.src = "https://games.enhancedtwitch.com/guess-anime/videos/" + media;
         container.appendChild(videoElement);
 
         videoElement.play();
